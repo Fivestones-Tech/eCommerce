@@ -144,6 +144,16 @@ body::-webkit-scrollbar-thumb:hover {background:  hsl(0, 0%, 70%); }
     height: 12px; /* for horizontal scroll*/
 }
 
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 3px solid var(--white);
+    border-radius: 20px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb { background: hsl(0, 0%, 90%); }
+
+.has-scrollbar::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%); }
 /**
 * #main
 */
