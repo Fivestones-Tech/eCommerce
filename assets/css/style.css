@@ -151,9 +151,9 @@ body::-webkit-scrollbar-thumb:hover {background:  hsl(0, 0%, 70%); }
     border-radius: 20px;
 }
 
-.has-scrollbar::-webkit-scrollbar-thumb { background: hsl(0, 0%, 90%); }
+.has-scrollbar:hover::-webkit-scrollbar-thumb { background: hsl(0, 0%, 90%); }
 
-.has-scrollbar::-webkit-scrollbar-thumb { background: hsl(0, 0%, 80%); }
+.has-scrollbar::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 80%); }
 /**
 * #main
 */
@@ -497,7 +497,7 @@ body::-webkit-scrollbar-thumb:hover {background:  hsl(0, 0%, 70%); }
     overflow-y: scroll;
     overscroll-behavior: contain;
     visibility: hidden;
-    transition: 8.5s ease;
+    /* transition: 0.5s ease; */
     z-index: 20; 
 }
 
@@ -505,5 +505,51 @@ body::-webkit-scrollbar-thumb:hover {background:  hsl(0, 0%, 70%); }
     left: 0;
     visibility: visible;
 }
+
+.menu-top {
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--cultured);
+}
+
+.menu-top .menu-title {
+    color: var(--salmon-pink);
+    font-size: var(--fs-4);
+    font-weight: var(--weight-600);
+}
+
+.menu-close-btn {
+    color: var(--eerie-black);
+    font-size: 22px;
+}
+
+.menu-close-btn ion-icon {
+    --ionicon-stroke-width: 50px;
+}
+
+.mobile-menu-category-list {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
