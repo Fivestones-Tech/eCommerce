@@ -25,29 +25,49 @@ toastCloseBtn.addEventListener('click', function () {
  
  
  
- 
- 
  // Mobile menu variables
- const mobileMenuOpenBtn = document.querySelector('[data-mobile-menu-open-btn]');
- const mobileMenu = document.querySelectorAll('[data-mobile-menu]')
- const mobileMenuCloseBtn = document.querySelectorAll('[ data-mobile-menu-close-btn]');
- const overlay = document.querySelector('[data-overlay]');
+const mobileMenuOpenBtns = document.querySelectorAll('[data-mobile-menu-open-btn]');
+const mobileMenus = document.querySelectorAll('[data-mobile-menu]');
+const mobileMenuCloseBtns = document.querySelectorAll('[data-mobile-menu-close-btn]');
+const overlay = document.querySelector('[data-overlay]');
+
+for (let i = 0; i < mobileMenuOpenBtns.length; i++) {
+  (function (index) {
+    const mobileMenuCloseFunc = function () {
+      mobileMenus[index].classList.remove('active');
+      overlay.classList.remove('active');
+    };
+
+    mobileMenuOpenBtns[index].addEventListener('click', function () {
+      mobileMenus[index].classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    mobileMenuCloseBtns[index].addEventListener('click', mobileMenuCloseFunc);
+    overlay.addEventListener('click', mobileMenuCloseFunc);
+  })(i);
+}
+
+ // Mobile menu variables
+//  const mobileMenuOpenBtn = document.querySelector('[data-mobile-menu-open-btn]');
+//  const mobileMenu = document.querySelectorAll('[data-mobile-menu]')
+//  const mobileMenuCloseBtn = document.querySelectorAll('[ data-mobile-menu-close-btn]');
+//  const overlay = document.querySelector('[data-overlay]');
  
- for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
+//  for (let i = 0; i < mobileMenuOpenBtn.length; i++) {
      
-     //mobile menu function
-     const mobileMenuCloseFunc = function () {
-         mobileMenu[i].classList.remove('active');
-         overlay.classList.remove('active');
-     }
+//      //mobile menu function
+//      const mobileMenuCloseFunc = function () {
+//          mobileMenu[i].classList.remove('active');
+//          overlay.classList.remove('active');
+//      }
      
-     mobileMenuOpenBtn[i].addEventListener('click', function () {
-         mobileMenu[i].classList.add('active');
-         overlay.classList.add('active');
-     });
+//      mobileMenuOpenBtn[i].addEventListener('click', function () {
+//          mobileMenu[i].classList.add('active');
+//          overlay.classList.add('active');
+//      });
      
-     mobileMenuCloseBtn[i].addEventListener('click', mobileMenuCloseFunc);
-     overlay.addEventListener('click', mobileMenuCloseFunc);
+//      mobileMenuCloseBtn[i].addEventListener('click', mobileMenuCloseFunc);
+//      overlay.addEventListener('click', mobileMenuCloseFunc);
      
- }
- 
+//  }
