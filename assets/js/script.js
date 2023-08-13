@@ -1,4 +1,4 @@
-'use strict';
+
 
 //modal variables
 const modal = document.querySelector('[data-modal]')
@@ -49,7 +49,6 @@ for (let i = 0; i < mobileMenuOpenBtns.length; i++) {
 }
 
 //    accordion variables
-
 
 const accordionBtn = document.querySelectorAll('[data-accordion-btn]');
 const accordion = document.querySelectorAll('[data-accordion]');
