@@ -2141,5 +2141,17 @@ footer {
         padding: 5px;
     }
 
+    .header-user-action  .count {
+        position: absolute;
+        top: -2px;
+        right: -3px;
+        background: var(--bittersweet);
+        color: var(--white);
+        font-size: 12px;
+        font-weight: var(--weight-500);
+        line-height: 1;
+        padding: 2px;
+     }
+
 }
 
